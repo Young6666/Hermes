@@ -72,7 +72,7 @@ def fetch_and_process_news():
                     send_slack_message(message)
                     count += 1
                     if (count >= 3):
-                        return
+                        break
                     
         except Exception as e:
             print(f"{source['name']} 처리 중 오류 발생: {e}")
